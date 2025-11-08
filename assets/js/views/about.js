@@ -1,0 +1,1 @@
+export default function About(){return `<div class='card'><h2>عن المنصة</h2><p>النسخة الرسمية المدمجة، معدّة للنشر على GitHub Pages مع دعم PWA.</p></div>`;}

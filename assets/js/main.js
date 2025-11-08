@@ -1,0 +1,11 @@
+import { route, startRouter, updateBN } from './router.js';
+import { initAuthUI } from './auth.js';
+import Home from './views/home.js'; import Competitions from './views/competitions.js'; import Details from './views/details.js'; import Submit from './views/submit.js'; import Dashboard from './views/dashboard.js'; import Judge from './views/judge.js'; import AdminAdvanced from './views/admin-advanced.js'; import Profile from './views/profile.js'; import Prizes from './views/prizes.js'; import About from './views/about.js'; import SponsorCenter from './views/sponsor.js'; import Wallet from './views/wallet.js'; import Market from './views/market.js'; import SponsorReports from './views/sponsor-reports.js';
+const THEME='mus_theme'; const saved=localStorage.getItem(THEME); if(saved==='dark') document.documentElement.classList.add('dark');
+document.getElementById('toggleTheme').addEventListener('click',()=>{ document.documentElement.classList.toggle('dark'); localStorage.setItem(THEME, document.documentElement.classList.contains('dark')?'dark':'light'); });
+const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+let deferredPrompt=null; addEventListener('beforeinstallprompt',e=>{e.preventDefault(); deferredPrompt=e; const btn=document.getElementById('installBtn'); if(btn) btn.hidden=false;}); addEventListener('appinstalled',()=>{ const btn=document.getElementById('installBtn'); if(btn) btn.hidden=true;});
+if('serviceWorker' in navigator){ addEventListener('load',()=>navigator.serviceWorker.register('./sw-v7.js')); }
+initAuthUI();
+route('/', Home); route('/competitions', Competitions); route('/details', Details); route('/submit', Submit); route('/dashboard', Dashboard); route('/judge', Judge); route('/admin-adv', AdminAdvanced); route('/profile', Profile); route('/prizes', Prizes); route('/about', About); route('/sponsor', SponsorCenter); route('/wallet', Wallet); route('/sponsor-market', Market); route('/sponsor-reports', SponsorReports); route('*', Home);
+startRouter(); updateBN();
