@@ -1,1 +1,1 @@
-export default function SponsorCenter(){return `<div class='card'><h2>مركز الرعاة</h2></div>`;}
+export default function SponsorCenter(){ return `<div class='card'><h2>مركز الرعاة</h2><p>باقات وتعهدات رعاية.</p><a class='btn' href='#/wallet'>المحفظة</a> <a class='btn btn--light' href='#/sponsor-market'>سوق الرعايات</a> <a class='btn btn--light' href='#/sponsor-reports'>تقارير الرعاة</a></div>`; }

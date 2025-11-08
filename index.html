@@ -1,19 +1,34 @@
 <!doctype html><html lang="ar" dir="rtl"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>منصة مسابقة — الإصدار الرسمي</title>
+<title>منصة مسابقة — النسخة الرسمية المدمجة</title>
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" href="./assets/images/favicon.png">
 <link rel="stylesheet" href="./assets/css/style.css">
 <script defer type="module" src="./assets/js/main.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head><body>
 <header class="header"><div class="container header__inner">
-  <div class="brand">
-    <img src="./assets/images/logo-musabaqa.svg" alt="شعار مسابقة" class="brand__logo">
-    <div class="brand__stack"><img src="./assets/images/logo-vision.svg" class="brand__badge"><img src="./assets/images/logo-talabia.svg" class="brand__badge"></div>
-  </div>
+  <div class="brand"><img src="./assets/images/logo-musabaqa.svg" alt="شعار مسابقة" class="brand__logo"></div>
   <nav class="nav"><a data-link href="#/">الرئيسية</a><a data-link href="#/competitions">المسابقات</a><a data-link href="#/about">عن المنصة</a></nav>
-  <div class="header__actions"><button id="toggleTheme" class="btn btn--ghost">🌓</button><button id="authBtn" class="btn btn--ghost">دخول / تسجيل</button></div>
+  <div class="header__actions"><button id="toggleTheme" class="btn btn--ghost">🌓</button><button id="authBtn" class="btn btn--ghost">دخول / تسجيل</button><button id="installBtn" class="btn btn--light" hidden>تثبيت</button></div>
 </div></header>
+<aside class="subnav" id="roleNav" hidden><div class="container subnav__inner"><nav class="role-tabs" aria-label="مسارات">
+<a data-link href="#/dashboard">لوحة المستخدم</a><a data-link href="#/judge" id="judgeTab" hidden>التحكيم</a><a data-link href="#/admin-adv" id="adminAdvTab" hidden>لوحة المدير المتقدمة</a><a data-link href="#/wallet" id="walletTab" hidden>المحفظة والفواتير</a><a data-link href="#/prizes" id="prizeTab" hidden>استلام الجوائز</a><a data-link href="#/sponsor" id="sponsorTab" hidden>مركز الرعاة</a><a data-link href="#/sponsor-market" id="marketTab" hidden>سوق الرعايات</a><a data-link href="#/sponsor-reports" id="reportsTab" hidden>تقارير الرعاة</a><a data-link href="#/profile">ملفي</a>
+</nav><div class="subnav__info" id="roleInfo"></div></div></aside>
 <main id="app" class="app container" tabindex="-1" aria-live="polite"></main>
-<footer class="footer"><div class="container footer__inner"><div class="footer__brand"><img src="./assets/images/logo-musabaqa.svg" class="brand__logo"><p>© <span id="year"></span> مسابقة — الإصدار الرسمي</p></div></div></footer>
-</body></html>
+<nav class="bottom-nav" aria-label="التنقل السفلي"><div class="bn__inner container">
+<a data-link href="#/" id="bn-home">🏠<small>الرئيسية</small></a><a data-link href="#/competitions" id="bn-comps">🏆<small>المسابقات</small></a><a data-link href="#/dashboard" id="bn-dash">📊<small>لوحتي</small></a><a data-link href="#/profile" id="bn-prof">👤<small>ملفي</small></a>
+</div></nav>
+<footer class="footer"><div class="container footer__inner"><div class="footer__brand"><img src="./assets/images/logo-talabia.svg" class="brand__badge"><img src="./assets/images/logo-vision.svg" class="brand__badge"></div><div class="footer__copy"><p>© <span id="year"></span> مسابقة — جميع الحقوق محفوظة</p></div></div></footer>
+<dialog id="authModal" class="modal"><form method="dialog" class="modal__content" id="authForm">
+<button class="modal__close" value="close" aria-label="إغلاق">×</button>
+<h3 id="authTitle">تسجيل الدخول</h3>
+<label>اسم المستخدم <input type="text" id="email" placeholder="admin" required autocomplete="username"></label>
+<label>كلمة المرور <input type="password" id="password" minlength="4" placeholder="M1234" required autocomplete="current-password"></label>
+<label>نوع الحساب <select id="accountType"><option value="individual">الأفراد</option><option value="sponsor">الرعاة</option><option value="government">الجهات الحكومية</option><option value="nonprofit">الجهات غير الربحية</option><option value="company">الشركات</option><option value="investor">المستثمرين</option></select></label>
+<label>الدور <select id="role"><option value="participant">مشارك</option><option value="judge">محكّم</option><option value="admin">مدير</option></select></label>
+<div class="row" id="quickLogins"><button type="button" class="btn btn--light" data-role="participant">دخول سريع (مشارك)</button><button type="button" class="btn btn--light" data-role="judge">دخول سريع (محكّم)</button><button type="button" class="btn btn--light" data-role="admin">دخول سريع (مدير)</button></div>
+<div class="row"><label class="checkbox"><input type="checkbox" id="isNew"><span>إنشاء حساب جديد</span></label><a href="#" id="toggleAuth" class="link">لدي حساب</a></div>
+<button class="btn" id="submitAuth">متابعة</button>
+<p class="note">دخول تجريبي: <b>admin / M1234</b></p>
+</form></dialog></body></html>
