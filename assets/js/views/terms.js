@@ -1,1 +1,0 @@
-export default function Terms(){return `<div class='card'><h2>الشروط</h2></div>`;}

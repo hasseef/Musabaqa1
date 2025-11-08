@@ -1,1 +1,0 @@
-export default function Dashboard(){ return `<div class='card'><h2>لوحة المستخدم</h2><p class='muted'>عرض المشاركات والإشعارات (نموذجي).</p></div>`; }

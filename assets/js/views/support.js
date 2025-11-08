@@ -1,1 +1,0 @@
-export default function Support(){return `<div class='card'><h2>الدعم</h2></div>`;}

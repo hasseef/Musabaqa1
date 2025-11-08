@@ -1,1 +1,0 @@
-export default function Privacy(){return `<div class='card'><h2>الخصوصية</h2></div>`;}

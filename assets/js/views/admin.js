@@ -1,1 +1,0 @@
-export default function Admin(){return `<div class='card'><h2>الإدارة</h2></div>`;}
