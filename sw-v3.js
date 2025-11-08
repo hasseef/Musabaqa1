@@ -1,1 +1,1 @@
-const CACHE="musabaqa-pro-v3";
+const CACHE="musabaqa-pro-v2";

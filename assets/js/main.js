@@ -1,1 +1,1 @@
-if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('./sw-v3.js'));}
+if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));}
