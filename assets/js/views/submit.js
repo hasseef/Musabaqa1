@@ -1,0 +1,1 @@
+export default function Submit(){return `<div class='card'><h2>التقديم</h2></div>`;}

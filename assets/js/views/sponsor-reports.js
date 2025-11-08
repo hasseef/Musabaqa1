@@ -1,0 +1,1 @@
+export default function SponsorReports(){return `<div class='card'><h2>تقارير الرعاة</h2></div>`;}

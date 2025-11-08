@@ -1,0 +1,1 @@
+export const fmtDate=d=>new Date(d).toLocaleDateString('ar-SA',{year:'numeric',month:'short',day:'2-digit'}); export const uid=()=>Math.random().toString(36).slice(2); export const pct=(a,b)=>b?Math.round((a/b)*100):0;

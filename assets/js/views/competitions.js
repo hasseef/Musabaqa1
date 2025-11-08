@@ -1,0 +1,1 @@
+export default function Competitions(){return `<div class='card'><h2>المسابقات</h2></div>`;}

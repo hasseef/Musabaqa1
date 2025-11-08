@@ -1,0 +1,1 @@
+export default function About(){return `<div class='card'><h2>عن المنصة</h2></div>`;}

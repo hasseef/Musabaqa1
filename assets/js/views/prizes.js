@@ -1,0 +1,1 @@
+export default function Prizes(){return `<div class='card'><h2>الجوائز</h2></div>`;}

@@ -1,0 +1,1 @@
+export default function SponsorCenter(){return `<div class='card'><h2>مركز الرعاة</h2></div>`;}

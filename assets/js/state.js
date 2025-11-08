@@ -1,0 +1,1 @@
+export const storage={read:(k,f=null)=>{try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}},write:(k,v)=>localStorage.setItem(k,JSON.stringify(v)),del:(k)=>localStorage.removeItem(k)};

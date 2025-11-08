@@ -1,1 +1,6 @@
-if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));}
+
+import { route, startRouter, updateBN } from './router.js';
+import Home from './views/home.js'; import Competitions from './views/competitions.js'; import Details from './views/details.js'; import Submit from './views/submit.js'; import Dashboard from './views/dashboard.js'; import Judge from './views/judge.js'; import Admin from './views/admin.js'; import Profile from './views/profile.js'; import Prizes from './views/prizes.js'; import About from './views/about.js'; import Privacy from './views/privacy.js'; import Terms from './views/terms.js'; import Support from './views/support.js'; import SponsorCenter from './views/sponsor.js'; import Wallet from './views/wallet.js'; import Market from './views/market.js'; import SponsorReports from './views/sponsor-reports.js';
+if('serviceWorker' in navigator){ addEventListener('load',()=>navigator.serviceWorker.register('./sw-v5.js')); }
+route('/',Home); route('/competitions',Competitions); route('/details',Details); route('/submit',Submit); route('/dashboard',Dashboard); route('/judge',Judge); route('/admin',Admin); route('/profile',Profile); route('/prizes',Prizes); route('/about',About); route('/privacy',Privacy); route('/terms',Terms); route('/support',Support); route('/sponsor',SponsorCenter); route('/wallet',Wallet); route('/sponsor-market',Market); route('/sponsor-reports',SponsorReports); route('*',Home);
+startRouter(); updateBN();

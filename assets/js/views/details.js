@@ -1,0 +1,1 @@
+export default function Details(){return `<div class='card'><h2>التفاصيل</h2></div>`;}

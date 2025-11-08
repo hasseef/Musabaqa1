@@ -1,0 +1,1 @@
+export default function Home(){return `<div class='card'><h2>مرحبًا بك</h2><p>استخدم admin / M1234.</p></div>`;}
