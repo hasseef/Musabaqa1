@@ -1,0 +1,1 @@
+import Navbar from '@/components/Navbar';import BottomNav from '@/components/BottomNav';export default function Judge(){return(<><Navbar/><section className='container my-6'><div className='card'><h2 className='text-2xl font-extrabold'>منطقة التحكيم</h2><p className='text-slate-600'>واجهة تقييم ونقاط (نموذجية).</p></div></section><BottomNav/></>)}

@@ -1,0 +1,3 @@
+'use client';import { create } from 'zustand';import { persist } from 'zustand/middleware';
+export type Role='participant'|'judge'|'admin';export type AccountType='individual'|'sponsor'|'government'|'nonprofit'|'company'|'investor';export type User={email:string;role:Role;accountType:AccountType};
+type AuthStore={user:User|null;login:(u:User)=>void;logout:()=>void};export const useAuth=create<AuthStore>()(persist((set)=>({user:null,login:(u)=>set({user:u}),logout:()=>set({user:null})}),{name:'mus-auth'}));

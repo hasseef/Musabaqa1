@@ -1,0 +1,1 @@
+export default { darkMode:['class'], content:['./app/**/*.{ts,tsx}','./components/**/*.{ts,tsx}'], theme:{ extend:{ colors:{ brand:{DEFAULT:'#006C35',2:'#00A859',gold:'#FDB022'}}, boxShadow:{soft:'0 10px 30px rgba(0,0,0,.08)'} } }, plugins:[] } as import('tailwindcss').Config;

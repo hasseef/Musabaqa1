@@ -1,0 +1,2 @@
+import Navbar from '@/components/Navbar';import BottomNav from '@/components/BottomNav';
+export default function About(){return(<><Navbar/><section className='container my-6'><div className='card'><h2 className='text-2xl font-extrabold'>عن المنصة</h2><p className='text-slate-600 mt-2'>منصة وطنية للمسابقات — سوق رعايات، محفظة، ولوحات إدارة.</p></div></section><BottomNav/></>)}
