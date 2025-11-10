@@ -1,1 +1,1 @@
-export default function Judge(){ return `<div class='card'><h2>منطقة التحكيم</h2><p class='muted'>واجهة تقييم ونقاط (نموذجية).</p></div>`; }
+export default function Judge(){ return `<div class='card'><h2>منطقة التحكيم</h2><p class='muted'>واجهة تقييم.</p></div>`; }
